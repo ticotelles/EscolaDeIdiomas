@@ -97,7 +97,7 @@ namespace EscolaDeIdiomas.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EscolaDeIdiomas.Models.Turma", b =>
+            modelBuilder.Entity("EscolaDeIdiomas.Models.TurmaModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

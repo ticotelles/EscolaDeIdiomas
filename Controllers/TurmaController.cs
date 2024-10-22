@@ -22,21 +22,21 @@ namespace EscolaDeIdiomas.Controllers
         [HttpGet("ListarTurma")]
         public async Task<ActionResult<ResponseModel<List<TurmaModel>>>> ListarTurma()
         {
-            var turma = _turmaInterface.ListarTurma();
+            var turma = await _turmaInterface.ListarTurma();
             return Ok(turma);
         }
 
         [HttpPost("CadastrarTurma")]
         public async Task<ActionResult<ResponseModel<List<TurmaModel>>>> CadastrarTurma(TurmaCadastroDto turmaCadastroDto)
         {
-            var turma = _turmaInterface.CadastrarTurma(turmaCadastroDto);
+            var turma = await _turmaInterface.CadastrarTurma(turmaCadastroDto);
             return Ok(turma);
         }
 
         [HttpDelete("DeletarTurma")]
         public async Task<ActionResult<ResponseModel<List<TurmaModel>>>> DeletarTurma(int id)
         {
-            var turma = _turmaInterface.DeletarTurma(id);
+            var turma = await _turmaInterface.DeletarTurma(id);
             return Ok(turma);
         }
 

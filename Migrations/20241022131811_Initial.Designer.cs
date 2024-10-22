@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EscolaDeIdiomas.Migrations
 {
     [DbContext(typeof(ContextoDB))]
-    [Migration("20241019152653_Initial")]
+    [Migration("20241022131811_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -100,7 +100,7 @@ namespace EscolaDeIdiomas.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EscolaDeIdiomas.Models.Turma", b =>
+            modelBuilder.Entity("EscolaDeIdiomas.Models.TurmaModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

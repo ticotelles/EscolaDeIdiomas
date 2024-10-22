@@ -17,18 +17,19 @@ namespace EscolaDeIdiomas.Models
             Email = email;
         }
 
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
 
-        [Required(ErrorMessage = "O nome é Obrigatório.", AllowEmptyStrings = false)]
+        //[Required(ErrorMessage = "O nome é Obrigatório.", AllowEmptyStrings = false)]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "O CPF é Obrigatório.", AllowEmptyStrings = false)]
+        //[Required(ErrorMessage = "O CPF é Obrigatório.", AllowEmptyStrings = false)]
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "O E-mail é Obrigatorio.", AllowEmptyStrings = false)]
+        //[Required(ErrorMessage = "O E-mail é Obrigatorio.", AllowEmptyStrings = false)]
         public string Email { get; set; }
+        //public ICollection<TurmaModel> Turma { get; set; } = [];
 
     }
 }

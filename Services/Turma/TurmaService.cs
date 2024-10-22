@@ -48,10 +48,11 @@ namespace EscolaDeIdiomas.Services.Turma
 
             try
             {
-                var turma = _contexto.Turmas.FirstOrDefaultAsync(turmaBanco =>  turmaBanco.Id == id);
+                var turma = await _contexto.Turmas.FirstOrDefaultAsync(turmaBanco =>  turmaBanco.Id == id);
                 if (turma == null)
                 {
                     resposta.Mensagem = "Erro ao Deletar, turma não encontrado!";
+                    return resposta;
                 }
 
                 _contexto.Remove(turma);
@@ -76,7 +77,6 @@ namespace EscolaDeIdiomas.Services.Turma
         public async Task<ResponseModel<List<TurmaModel>>> ListarTurma()
         {
             ResponseModel<List<TurmaModel>> resposta = new ResponseModel<List<TurmaModel>>();
-
             try
             {
                 var turma = await _contexto.Turmas.ToListAsync();

@@ -22,11 +22,8 @@ namespace EscolaDeIdiomas.Controllers
         [HttpGet("ListarAlunos")]
         public async Task<ActionResult<ResponseModel<List<AlunoModel>>>> ListarAlunos()
         {
-
-
             var alunos = await _alunoInterface.ListarAlunos();
             return Ok(alunos);
-
         }
 
         [HttpGet("BuscarAlunoPorId/{id}")]

@@ -20,7 +20,7 @@ namespace EscolaDeIdiomas.Mappings
 
             builder.Property(p => p.Email)
                 .HasColumnType("varchar(100)")
-            .IsRequired();
+                .IsRequired();
 
             builder.HasData(new AlunoModel(1, "Arthur1", "10032136692", "arthur1@gmail.com"));
             builder.HasData(new AlunoModel(2, "Arthur2", "20032136692", "arthur2@gmail.com"));
