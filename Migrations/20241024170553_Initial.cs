@@ -2,8 +2,6 @@
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace EscolaDeIdiomas.Migrations
 {
     /// <inheritdoc />
@@ -16,7 +14,7 @@ namespace EscolaDeIdiomas.Migrations
                 name: "Aluno",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    AlunoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
                     CPF = table.Column<string>(type: "varchar(11)", nullable: false),
@@ -24,7 +22,7 @@ namespace EscolaDeIdiomas.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Aluno", x => x.Id);
+                    table.PrimaryKey("PK_Aluno", x => x.AlunoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -41,34 +39,42 @@ namespace EscolaDeIdiomas.Migrations
                     table.PrimaryKey("PK_Turma", x => x.Id);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Aluno",
-                columns: new[] { "Id", "CPF", "Email", "Nome" },
-                values: new object[,]
+            migrationBuilder.CreateTable(
+                name: "AlunoModelTurmaModel",
+                columns: table => new
                 {
-                    { 1, "10032136692", "arthur1@gmail.com", "Arthur1" },
-                    { 2, "20032136692", "arthur2@gmail.com", "Arthur2" },
-                    { 3, "30032136692", "arthur3@gmail.com", "Arthur3" },
-                    { 4, "40032136692", "arthur4@gmail.com", "Arthur4" },
-                    { 5, "50032136692", "arthur5@gmail.com", "Arthur5" },
-                    { 6, "60032136692", "arthur6@gmail.com", "Arthur6" },
-                    { 7, "70032136692", "arthur7@gmail.com", "Arthur7" }
+                    AlunoId = table.Column<int>(type: "int", nullable: false),
+                    TurmaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AlunoModelTurmaModel", x => new { x.TurmaId, x.AlunoId });
+                    table.ForeignKey(
+                        name: "FK_AlunoModelTurmaModel_Aluno_AlunoId",
+                        column: x => x.AlunoId,
+                        principalTable: "Aluno",
+                        principalColumn: "AlunoId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AlunoModelTurmaModel_Turma_TurmaId",
+                        column: x => x.TurmaId,
+                        principalTable: "Turma",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Turma",
-                columns: new[] { "Id", "Codigo", "Nivel" },
-                values: new object[,]
-                {
-                    { 1, "Eng01", "Iniciante" },
-                    { 2, "Eng02", "Intermediario" },
-                    { 3, "Eng03", "Avançado" }
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_AlunoModelTurmaModel_AlunoId",
+                table: "AlunoModelTurmaModel",
+                column: "AlunoId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AlunoModelTurmaModel");
+
             migrationBuilder.DropTable(
                 name: "Aluno");
 

@@ -1,4 +1,8 @@
-﻿namespace EscolaDeIdiomas.Models
+﻿using Azure;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
+namespace EscolaDeIdiomas.Models
 {
     public class TurmaModel
     {
@@ -6,17 +10,19 @@
         {
             
         }
-        public TurmaModel(int id, string codigo, string nivel)
+        public TurmaModel(int id, string codigo, string nivel, ICollection<AlunoModelTurmaModel> alunos)
         {
             Id = id;
             Codigo = codigo;
             Nivel = nivel;
+            Alunos = alunos;
         }
 
         public int Id { get; set; }
         public string Codigo { get; set; }
         public string Nivel { get; set; }
-        //public ICollection<AlunoModel> Aluno { get; set; } = [];
 
+        [JsonIgnore]
+        public ICollection<AlunoModelTurmaModel> Alunos { get; set; }
     }
 }

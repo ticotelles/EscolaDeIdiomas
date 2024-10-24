@@ -18,10 +18,6 @@ namespace EscolaDeIdiomas.Mappings
                 .HasColumnType("varchar(20)")
                 .IsRequired();
 
-
-            builder.HasData(new TurmaModel(1, "Eng01", "Iniciante"));
-            builder.HasData(new TurmaModel(2, "Eng02", "Intermediario"));
-            builder.HasData(new TurmaModel(3, "Eng03", "Avançado"));
         }
     }
 }

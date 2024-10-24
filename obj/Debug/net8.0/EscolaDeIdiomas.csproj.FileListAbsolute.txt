@@ -5,6 +5,7 @@ C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Deb
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.csproj.CoreCompileInputs.cache
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cs
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cache
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.sourcelink.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\appsettings.Development.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\appsettings.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\EscolaDeIdiomas.exe
@@ -140,4 +141,3 @@ C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Deb
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.pdb
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.genruntimeconfig.cache
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\ref\EscolaDeIdiomas.dll
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.sourcelink.json

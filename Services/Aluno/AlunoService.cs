@@ -47,7 +47,7 @@ namespace EscolaDeIdiomas.Services.Aluno
             try
             {
 
-                var aluno = await _contexto.Alunos.FirstOrDefaultAsync(alunoBanco => alunoBanco.Id == id);
+                var aluno = await _contexto.Alunos.FirstOrDefaultAsync(alunoBanco => alunoBanco.AlunoId == id);
                 if (aluno == null)
                 {
                     resposta.Mensagem = "Nenhum registro localizado!";
@@ -72,21 +72,61 @@ namespace EscolaDeIdiomas.Services.Aluno
             ResponseModel<List<AlunoModel>> resposta = new ResponseModel<List<AlunoModel>>();
             try
             {
-                var aluno = new AlunoModel()
+
+
+                var aluno = new AlunoModel
                 {
                     Nome = alunoCadastroDto.Nome,
                     CPF = alunoCadastroDto.CPF,
                     Email = alunoCadastroDto.Email
                 };
 
-                _contexto.Add(aluno);
-                await _contexto.SaveChangesAsync();
-                
-                resposta.Dados = await _contexto.Alunos.ToListAsync();
-                resposta.Mensagem = "Aluno Cadastrado com sucesso!";
-                return resposta;
 
+
+              
+                _contexto.Alunos.Add(aluno);
+                await _contexto.SaveChangesAsync();
+
+          
+                if (alunoCadastroDto.TurmaModel != null)
+                {
+                    var turma = await _contexto.Turmas
+                        .FirstOrDefaultAsync(t => t.Codigo == alunoCadastroDto.TurmaModel.Codigo && t.Nivel == alunoCadastroDto.TurmaModel.Nivel);
+
+                    
+                    if (turma == null)
+                    {
+                        turma = new TurmaModel
+                        {
+                            Codigo = alunoCadastroDto.TurmaModel.Codigo,
+                            Nivel = alunoCadastroDto.TurmaModel.Nivel
+                        };
+
+                        _contexto.Turmas.Add(turma);
+                        await _contexto.SaveChangesAsync();
+                    }
+
+                
+                    var alunoTurma = new AlunoModelTurmaModel
+                    {
+                        AlunoId = aluno.AlunoId,
+                        TurmaId = turma.Id
+                    };
+
+                    _contexto.AlunoModelTurmaModel.Add(alunoTurma);
+                    await _contexto.SaveChangesAsync();
+
+
+
+
+                    resposta.Dados = await _contexto.Alunos.Include(a => a.Turmas).ToListAsync();
+                    resposta.Mensagem = "Aluno Cadastrado com sucesso!";
+                    return resposta;
+
+                }
+                return resposta;
             }
+           
             catch (Exception ex)
             {
                 resposta.Mensagem = ex.Message;
@@ -101,7 +141,7 @@ namespace EscolaDeIdiomas.Services.Aluno
 
             try
             {
-                var aluno = await _contexto.Alunos.FirstOrDefaultAsync(alunoBanco => alunoBanco.Id == id);
+                var aluno = await _contexto.Alunos.FirstOrDefaultAsync(alunoBanco => alunoBanco.AlunoId == id);
 
                 if(aluno == null)
                 {
@@ -132,7 +172,8 @@ namespace EscolaDeIdiomas.Services.Aluno
             try
             {
                 var aluno = await _contexto.Alunos
-                    .FirstOrDefaultAsync(alunoBanco => alunoBanco.Id == alunoEditarDto.Id);
+                    .FirstOrDefaultAsync(alunoBanco => alunoBanco.AlunoId == alunoEditarDto.Id);
+
 
                 if (aluno == null)
                 {

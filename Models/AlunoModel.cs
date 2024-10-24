@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Azure;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace EscolaDeIdiomas.Models
 {
@@ -6,30 +8,29 @@ namespace EscolaDeIdiomas.Models
     {
 
         public AlunoModel()
-        {
-            
+        {   
         }
-        public AlunoModel(int id, string nome, string cpf, string email)
+
+        public AlunoModel(int alunoId, string nome, string cpf, string email, ICollection<AlunoModelTurmaModel> turmas)
         {
-            Id = id;
+            AlunoId = alunoId;
             Nome = nome;
             CPF = cpf;
             Email = email;
+            Turmas = turmas;
         }
 
-        //[Key]
-        public int Id { get; set; }
+        [Key]
+        public int AlunoId { get; set; }
 
-
-        //[Required(ErrorMessage = "O nome é Obrigatório.", AllowEmptyStrings = false)]
         public string Nome { get; set; }
-
-        //[Required(ErrorMessage = "O CPF é Obrigatório.", AllowEmptyStrings = false)]
         public string CPF { get; set; }
-
-        //[Required(ErrorMessage = "O E-mail é Obrigatorio.", AllowEmptyStrings = false)]
         public string Email { get; set; }
-        //public ICollection<TurmaModel> Turma { get; set; } = [];
+
+        [JsonIgnore]
+        public ICollection<AlunoModelTurmaModel> Turmas { get; set; }
+
+
 
     }
 }

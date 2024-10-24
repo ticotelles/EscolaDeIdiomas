@@ -29,7 +29,6 @@ namespace EscolaDeIdiomas.Services.Turma
                 await _contexto.SaveChangesAsync();
                 resposta.Dados = await _contexto.Turmas.ToListAsync();
                 resposta.Mensagem = "Turma cadastrado com sucesso!";
-
                 return resposta;
 
             }
