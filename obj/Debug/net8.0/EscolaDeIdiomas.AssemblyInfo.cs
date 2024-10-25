@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EscolaDeIdiomas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d9bdf2044001b103baaa60be7ef880edd93108e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+887d57845878964857d923b6cf853e83f1b533b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("EscolaDeIdiomas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EscolaDeIdiomas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

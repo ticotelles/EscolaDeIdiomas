@@ -8,5 +8,6 @@ namespace EscolaDeIdiomas.Services.Turma
         Task<ResponseModel<List<TurmaModel>>> ListarTurma();
         Task<ResponseModel<List<TurmaModel>>> CadastrarTurma(TurmaCadastroDto turmaCadastroDto);
         Task<ResponseModel<List<TurmaModel>>> DeletarTurma(int id);
+
     }
 }

@@ -72,7 +72,7 @@ namespace EscolaDeIdiomas.Services.Aluno
             ResponseModel<List<AlunoModel>> resposta = new ResponseModel<List<AlunoModel>>();
             try
             {
-
+              
 
                 var aluno = new AlunoModel
                 {
@@ -81,9 +81,9 @@ namespace EscolaDeIdiomas.Services.Aluno
                     Email = alunoCadastroDto.Email
                 };
 
+               
 
 
-              
                 _contexto.Alunos.Add(aluno);
                 await _contexto.SaveChangesAsync();
 

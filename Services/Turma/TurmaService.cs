@@ -27,6 +27,36 @@ namespace EscolaDeIdiomas.Services.Turma
 
                 _contexto.Add(turma);
                 await _contexto.SaveChangesAsync();
+
+
+                if (turmaCadastroDto.AlunoModel != null)
+                {
+                    var aluno = await _contexto.Alunos
+                            .FirstOrDefaultAsync(a => a.AlunoId == turmaCadastroDto.AlunoModel.Id);
+
+
+                    if (aluno == null)
+                    {
+                        aluno = new AlunoModel
+                        {
+                            AlunoId = turmaCadastroDto.AlunoModel.Id
+                        };
+
+                        _contexto.Alunos.Add(aluno);
+                        await _contexto.SaveChangesAsync();
+                    }
+
+                    var alunoTurma = new AlunoModelTurmaModel
+                    {
+                        AlunoId = aluno.AlunoId,
+                        TurmaId = turma.Id
+                    };
+
+                    _contexto.AlunoModelTurmaModel.Add(alunoTurma);
+                    await _contexto.SaveChangesAsync();
+
+                }
+
                 resposta.Dados = await _contexto.Turmas.ToListAsync();
                 resposta.Mensagem = "Turma cadastrado com sucesso!";
                 return resposta;
@@ -47,6 +77,9 @@ namespace EscolaDeIdiomas.Services.Turma
 
             try
             {
+
+                //var excluirturma = await _contexto.Turmas
+
                 var turma = await _contexto.Turmas.FirstOrDefaultAsync(turmaBanco =>  turmaBanco.Id == id);
                 if (turma == null)
                 {

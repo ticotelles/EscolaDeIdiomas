@@ -1,11 +1,3 @@
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.csproj.AssemblyReference.cache
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.GeneratedMSBuildEditorConfig.editorconfig
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.AssemblyInfoInputs.cache
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.AssemblyInfo.cs
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.csproj.CoreCompileInputs.cache
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cs
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cache
-C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.sourcelink.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\appsettings.Development.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\appsettings.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\EscolaDeIdiomas.exe
@@ -127,6 +119,14 @@ C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Deb
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.csproj.AssemblyReference.cache
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.GeneratedMSBuildEditorConfig.editorconfig
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.AssemblyInfoInputs.cache
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.AssemblyInfo.cs
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.csproj.CoreCompileInputs.cache
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cs
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.MvcApplicationPartsAssemblyInfo.cache
+C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\EscolaDeIdiomas.sourcelink.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\staticwebassets.build.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\staticwebassets.development.json
 C:\workSpace\Processo-Seletivo\NewMarlin\EscolaDeIdiomas\EscolaDeIdiomas\obj\Debug\net8.0\staticwebassets\msbuild.EscolaDeIdiomas.Microsoft.AspNetCore.StaticWebAssets.props
